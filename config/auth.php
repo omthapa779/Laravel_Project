@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'students',
         ],
     ],
 
@@ -60,15 +60,15 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'students' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Student::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'students' => [
+            'driver' => 'database',
+            'table' => 'students',
+        ],
     ],
 
     /*
@@ -87,8 +87,8 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'students' => [
+            'provider' => 'students',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
@@ -108,4 +108,41 @@ return [
 
     'password_timeout' => 10800,
 
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'students',
+        ],
+    ],
+    'providers' => [
+        'students' => [
+            'driver' => 'eloquent',
+            'model' => App\Student::class,
+        ],
+    ],
+    //
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'students',
+        ],
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'students',
+        ],
+        'student' => [
+            'driver' => 'session',
+            'provider' => 'students',
+        ],
+    ],
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
+        'students' => [
+            'driver' => 'eloquent',
+            'model' => App\Student::class,
+        ],
+    ],
 ];

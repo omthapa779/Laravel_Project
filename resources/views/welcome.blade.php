@@ -1,49 +1,33 @@
 <html>
 <head>
-<link href="{{asset('css/home.css')}}" rel="stylesheet">
+<link href="{{asset('css/welcome.css')}}" rel="stylesheet">
+<title>HOME</title>
 </head>
-<body>
-        <div class="nav_bar">
-        <h1 class="logo">MEMORIES</h1>
-        <h1><a href="index.html" class="home_nav">HOME</a></h1>
-        <h1><a href="{{url('/list/')}}" class="about_nav">EXPLORE</a></h1>
-        <h1><a href="{{url('/login/')}}" class="login_nav">LOGIN</a></h1>
-        <h1><a href="{{url('/signup/')}}" class="signup_nav">SIGN UP</a></h1>
-    </div>
-    <div class="explain">
+  <body>
+    <div class="all">
+        <div class="photo1"></div>
+        <div class="photo2"></div>
+        <h1 class="Title">MEMORIES</h1>
+        <h1 class="vctr">+</h1>
+         <h1 class="vctr1">+</h1>
+         <h1 class="vctr2">+</h1>
+         <h1 class="vctr3">+</h1>
+         <p class="description">
+          Memories where you can store all the things you experienced <br>with help of images, So you can relive the moment<br> again whenever you like.
+         </p>
+         <a href="{{url('/signup/')}}" style="text-decoration: none; color: #464646;">
+         <button class="full-rounded">
+          
+            <span>SIGNUP</span>
+         
+          <div class="border"></div>
+        </button>
+         </a>
 
-        <h1 class="explain_title">MEMORIES</h1>
-        <p class="explain_main"> is a site to upload and<br> connect with peoples around the world. In memories<br> peoples are able to explore and upload memories with<br> friends.
-        If you are new to Memories please go<br> through the signup process to make your own profile <br>and share your
-        experiences and memories with the world.</p>
-        <button class="button_signup" style="vertical-align:middle"><span>SIGN UP</span></button>
-    </div>
-    <div class="card1">
-        <div class="card-img"></div>
-          <div class="card-info">
-            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M4.828 21l-.02.02-.021-.02H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H4.828zM20 15V5H4v14L14 9l6 6zm0 2.828l-6-6L6.828 19H20v-1.172zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path></svg>
-            <p class="text-title">Dunkirk</p>
-            <p class="text-body">War Movie depicting the Dunkirk evacuation in World War II.</p>
-            <button class="card-button"><a href="https://en.wikipedia.org/wiki/Dunkirk_(2017_film)" style="text-decoration: none;">Read More</a></button>
-          </div>
-        </div>
-        <div class="card2">
-            <div class="card-img2"></div>
-              <div class="card-info">
-                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M4.828 21l-.02.02-.021-.02H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H4.828zM20 15V5H4v14L14 9l6 6zm0 2.828l-6-6L6.828 19H20v-1.172zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path></svg>
-                <p class="text-title">SUKUNA</p>
-                <p class="text-body"> SUKUNA is one of the main antagonists of the anime and manga series called Jujutsu Kaisen.</p>
-                <button class="card-button"><a href="https://jujutsu-kaisen.fandom.com/wiki/Sukuna" style="text-decoration: none;">Read More</a></button>
-              </div>
-            </div>
-            <div class="card3">
-                <div class="card-img3"></div>
-                  <div class="card-info">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M4.828 21l-.02.02-.021-.02H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H4.828zM20 15V5H4v14L14 9l6 6zm0 2.828l-6-6L6.828 19H20v-1.172zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path></svg>
-                    <p class="text-title">ANUBIS</p>
-                    <p class="text-body">Anubis was a jackal-headed deity who presided over the embalming process and accompanied dead kings in the afterworld.</p>
-                    <button class="card-button"><a href="https://www.historymuseum.ca/cmc/exhibitions/civil/egypt/egcrga4e.html#:~:text=Anubis%20was%20a%20jackal%2Dheaded,representing%20Maat)%20on%20the%20other." style="text-decoration: none;">Read More</a></button>
-                  </div>
-                </div>
-    </body>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="home" viewBox="0 0 16 16">
+  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+  <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+</svg>
+   </div>
+   </body>
 </html>
