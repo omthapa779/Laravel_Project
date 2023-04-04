@@ -30,7 +30,7 @@ class photouploader extends Controller
     }
     public function index() {
         $photos = Photo::all();
-        $photos = DB::table('photos')->inRandomOrder()->get();
+        $photos = Photo::inRandomOrder()->get();
     return view('index', ['photos' => $photos]);
     }
 }

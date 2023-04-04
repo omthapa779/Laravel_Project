@@ -1,8 +1,8 @@
 .photo {
   display: inline-block;
-
   width: calc(33.33% - 20px);
   position: relative;
+  left: 2vw;
   height: 300px; /* set a fixed height for all photos */
   overflow: hidden; /* hide any parts of the photo that exceed the height */
 }

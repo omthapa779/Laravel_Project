@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
+use App\Models\User;
+use Illuminate\Auth\Events\Registered;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Validation\Rules;
+use Illuminate\View\View;
 
 class PagesController extends Controller
 {
@@ -19,20 +25,40 @@ class PagesController extends Controller
         return view('welcome')->with($data);
     }
 
-    public function store(Request $request){
+    public function store(Request $request) {
+        $request->validate([
+            'username' => ['required'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', Rules\Password::defaults()],
+        ]);
     
-        $image = Image::make($request->file('image'));
-        $new_name = $request->file('image')->getClientOriginalName();
-        $image-> save('storage/image/'.$new_name);
-
-        $student = new Student;
-        $student->username = $request->username;
-        $student->email = $request->email;
-        $student->password = Hash::make($request->password);
-        $student->image = $new_name;
-        $student->save();
-
-        return redirect('/login');
+        $user = new User();
+        $user->email = $request->email;
+        $user->username = $request-> username;
+        $user->password=Hash::make($request->password);
+    
+        $user->save();
+    
+        return redirect(route('login'));
+    
+    }
+    public function login(Request $request) {
+        $request->validate([
+            'email' => ['required'],
+            'password' => ['required'],
+        ]);
+    
+         $credentials = [
+            'email'=> $request->email,
+            'password'=> $request->password,
+        ];
+           
+        if(Auth::attempt($credentials)){
+            return redirect('/index');
+        }
+        else{
+            return redirect('login');
+        }
     }
     
     public function list(){
@@ -41,10 +67,6 @@ class PagesController extends Controller
         return view('profile', ['students' => $loggedInUser]);
     }
 
-    public function login(){
-        $student = Student::get();
-        return view('login');
-    }
     public function signup(){
         return view('register');
     }
@@ -64,20 +86,8 @@ class PagesController extends Controller
         Student::where('id',$id)->delete();
         return redirect('/list');
     }
-
-    public function login1(Request $request)
-    {
-        $email = $request->input('email');
-        $password = $request->input('password');
-        
-        $student = Student::where('email', $email)->first();
-
-        if ($student && $student->password === $password) {
-            // login successful
-            return redirect('/list');
-        }
-
-        // login failed
-        return redirect()->back()->withErrors(['Invalid email or password']);
+    public function logout() {
+        Auth::logout();
+        return view('login');
     }
 }

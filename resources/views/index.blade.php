@@ -2,12 +2,28 @@
     <head>
         <title>Memories | Main</title>
         <link href="{{asset('css/explore.css')}}" rel="stylesheet">
+        <link href="{{asset('css/welcome.css')}}" rel="stylesheet">
 </head>
-<body>
+<body><br>
+<h1 class="title">PixelLake</h1>
+     <h2 class="navbar_1"><a href="{{url('/')}}" style="text-decoration: none; color: #fafafa;">HOME</a></h1>
+     <h2 class="navbar_2"><a href="{{url('/about/')}}" style="text-decoration: none; color: #fafafa;">ABOUT</a></h1>
+     <h2 class="navbar_3"><a href="{{url('/login/')}}" style="text-decoration: none; color: #fafafa;">LOGIN</a></h1>
+
+     <button class="register_button"><a href="{{url('/create/')}}" style="text-decoration: none; color: #fafafa;"> CREATE </a></button>
+
+
 @foreach ($photos as $photo)
     <div class="photo">
         <img id="{{ $photo->id }}" src="{{ asset('storage/all/' . $photo->image) }}" alt="Photo" onclick="openModal({{$photo->id }})">
-        <div class="caption">{{ $photo->caption }}</div>
+        <div class="caption">
+            <h2>
+            {{ $photo->caption }}
+           </h2>
+           <h2>
+           {{ $photo->username }}
+           </h2>
+        </div>
     </div>
 @endforeach
 <div id="modal" style="display: none">

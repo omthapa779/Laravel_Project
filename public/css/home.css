@@ -2,102 +2,42 @@
     overflow:hidden;
     margin: 0;
 }
-.all{
-    background-image: url(./photos/background.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
-.all_register{
-    background-image: url(./photos/signup/signup_gradient.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
-.positioned{
-    position: relative;
-    top: -100vh;
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: #141415;
 }
 @font-face {
-    font-family: title;
-    src: url(./fonts/scriptina.regular.ttf);
+    font-family: Titles;
+    src: url(./font/NewakeFont-Demo.otf);
 }
-.overlay{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(0, 0, 0);
-    opacity: 10%;
+h1{
+    font-size: 2em;
+    font-family: Titles;
+    font-weight: 100;
+   letter-spacing: 0.1em;
+}
+h2{
+    font-size: 1em;
+    font-family: Titles;
+    font-weight: 100;
+   letter-spacing: 0.1em;
 }
 .title{
-    font-family: title;
-    color: #fafafa;
-    position: relative;
-    left: 11%;
-}
-.home_home{
-    color: #0186D5;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    position: relative;
-    left: 50%;
-    top: -8vh;
-}
-.about_home{
-    color: #fafafa;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    position: relative;
-    left: 56%;
-    top: -10.78vh;
-}
-.signup_home{
-    color: #fafafa;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    position: relative;
-    left: 62%;
-    top: -13.58vh;
-}
-.login_home{
-    color: #fafafa;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    position: relative;
-    left: 69%;
-    top: -16.5vh;
-}
-.contact_home{
-    color: #fafafa;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    position: relative;
-    left: 75%;
-    top: -19.2vh;
+    margin: 2rem;
+    text-align: center;
+    background: -webkit-linear-gradient(#d52222,#ee23b1);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.blue_box{
-    background-color: #0186D5;
-    width: 55vh;
-    height: 35vh;
-    border-radius: 1%;
-    position: relative;
-    left: 45.25%;
-    top: 1vh;
-}
 .black_box{
     background-color: #000000;
     opacity: 70%;
     width: 40vh;
     height: 35vh;
     border-radius: 1%;
-    position: relative;
-    left: 71%;
-    top: -34vh;
+    position: absolute;
 }
 .images_holder{
     background-color: #000000;
@@ -105,7 +45,6 @@
     width:100%;
     height: 25vh;
     position: relative;
-   top: -25vh;
 }
 .box_title{
     color: #fafafa;
@@ -240,9 +179,8 @@
     background-size: cover;
     width: 25%;
     height: 70vh;
-    position: relative;
-    top: -10vh;
-    left: 17%;
+    position: absolute;
+    left: 15rem;
     border-top-left-radius: 3%;
     border-bottom-left-radius: 3%;
     text-align: center;
@@ -250,12 +188,11 @@
 .form_left_login{
     background-image: url(./photos/login/login_right.jpg);
     background-size: cover;
-    background-position-y: -9vh;
+    background-position-x: -18vw;
     width: 25%;
     height: 70vh;
-    position: relative;
-    top: -10vh;
-    left: 17%;
+    position: absolute;
+     left: 15rem;
     border-top-left-radius: 3%;
     border-bottom-left-radius: 3%;
     text-align: center;
@@ -271,7 +208,9 @@
     text-decoration: italic;
     font-weight: 100;
     font-size: 1rem;
-    color: #fafafa;
+    background: -webkit-linear-gradient(#f1f1f1,#3a3a3a);
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     position: relative;
     top: -60vh;
@@ -281,7 +220,9 @@
     text-decoration: italic;
     font-weight: 800;
     font-size: 2rem;
-    color: #fafafa;
+    background: -webkit-linear-gradient(#f1f1f1,#3a3a3a);
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     position: relative;
     top: -60vh;
@@ -291,7 +232,9 @@
     text-decoration: italic;
     font-weight: 100;
     font-size: 1rem;
-    color: #fafafa;
+    background: -webkit-linear-gradient(#f1f1f1,#3a3a3a);
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     position: relative;
     top: -20vh;
@@ -301,9 +244,8 @@
     background-size: cover;
     width: 40%;
     height: 70vh;
-    position: relative;
-    top: -80vh;
-    left: 42%;
+     position: absolute;
+    left: 35rem;
     border-top-right-radius: 3%;
     border-bottom-right-radius: 3%;
     text-align: center;
@@ -547,3 +489,57 @@
     opacity: 1;
     transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
    }
+
+   
+.navbar_1{
+margin: -3rem 7rem;
+    background: -webkit-linear-gradient(#f1f1f1,#3a3a3a);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar_2{
+    margin: 2.1rem 13rem;
+        background: -webkit-linear-gradient(#f1f1f1,#3a3a3a);
+        -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.navbar_3{
+    margin: -3rem 19rem;
+        background: -webkit-linear-gradient(#f1f1f1,#3a3a3a);
+        -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .register_button{
+      border: 2px solid #888;
+      background: -webkit-linear-gradient(#f1f1f1,#3a3a3a);
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Titles;
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    margin: 1.2rem 70rem;
+    align-self: auto;
+    height: 6vh;
+    width: 10vw;
+    letter-spacing: 0.1em;
+  }

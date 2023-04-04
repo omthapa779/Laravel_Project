@@ -8,7 +8,7 @@ use Illuminate\Contracts\Auth\Authenticatable;
 class Student extends Model implements Authenticatable {
     // class properties and methods go here
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'email', 'password',
     ];
 
     protected $hidden = [
@@ -16,7 +16,7 @@ class Student extends Model implements Authenticatable {
     ];
     
     use \Illuminate\Auth\Authenticatable;
-    protected $table = 'students';
+    protected $table = 'users';
     protected $connection = 'laravel1';
     public function getAuthIdentifierName()
     {
